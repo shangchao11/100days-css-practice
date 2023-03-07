@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet/less" href="./day2css.less">
+    <script src="./less.min.js"></script>
+    <title>day2</title>
+</head>
+
+<body>
+    <div class="frame">
+        <div class="center">
+            <div class="menu-icon">
+                <div class="line-1 no-animation"></div>
+                <div class="line-2 no-animation"></div>
+                <div class="line-3 no-animation"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // 获取元素
+        const menuIcon = document.querySelector('.menu-icon');
+        // 添加事件监听器
+        menuIcon.addEventListener('click', function () {
+            // 切换 active 类
+            this.classList.toggle('active');
+            // 去除 no-animation 类
+            const lines = this.querySelectorAll('.line-1, .line-2, .line-3');
+            lines.forEach(function (line) {
+                line.classList.remove('no-animation');
+            });
+        });
+    </script>
+</body>
+
+</html>
