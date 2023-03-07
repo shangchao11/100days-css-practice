@@ -24,6 +24,7 @@
 @menu-icon-line-space: 14px;
 @menu-icon-line-offsetY: @menu-icon-line-height + @menu-icon-line-space;
 @menu-icon-height: (3*@menu-icon-line-height) + (2*@menu-icon-line-space);
+//贝塞尔曲线通过两个控制点控制速度
 @cubic-bezier-in: cubic-bezier(0.30,1,0.70,1);
 @cubic-bezier-out: cubic-bezier(1,0.70,1,0.30);
 
@@ -41,6 +42,7 @@
     background-color: #fff;
     border-radius: 3px;
 		box-shadow: 0 2px 10px 0 rgba(0,0,0,0.3);
+    //背景颜色的变化过渡
     transition: background-color .2s ease-in-out;
   }
   .line-1 {
@@ -53,7 +55,7 @@
   .line-3 {
     animation: animate-line-3-rev .7s ease-in-out;
   }
-
+  //&代指当前元素=>.menu-icon即鼠标悬停后，line1-3发生的变化
   &:hover {
     .line-1,
     .line-2, 
@@ -82,7 +84,11 @@
     }
   }
 }
+// 这段less代码定义了一个名为"no-animation"的类，它用于禁用元素的动画效果。具体来说，通过此类，当应用在某个元素上时，它会执行以下操作：
 
+// 将元素的"-webkit-animation"属性设置为"none"，即禁用Webkit浏览器下的动画效果。
+// 将元素的"animation"属性设置为"none"，即禁用非Webkit浏览器下的动画效果。
+// 这个类通常用于在需要临时禁用动画效果的场景中，例如当页面正在加载时，禁用动画效果可以减轻页面的负担，加速页面加载；或者在特殊的交互场景中，禁用动画可以使得页面具有更好的交互体验。"!important"是一个CSS属性的特殊关键字，表示当前属性的优先级高于其他属性，无论其他属性的权重如何，都会应用当前属性的值。
 .no-animation {
 	-webkit-animation: none !important;
           animation: none !important; 
@@ -100,6 +106,7 @@
     transform: translate3d(0, @menu-icon-line-offsetY, 0) rotate(45deg);
   }
 }
+//逐渐变小-》消失
 @keyframes animate-line-2 {
   0% {
     transform: scale(1);
