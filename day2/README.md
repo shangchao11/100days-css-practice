@@ -9,8 +9,15 @@
 4.点击day2.html
 ### 知识点
 
-1. less定义全局变量
-使用@
+1. less全局变量声明
+
+```css
+/* 使用@声明变量 */
+@menu-icon-line-height: 8px;
+div{
+  height:@menu-icon-line-height
+}
+```
 2. 背景颜色的变化过渡
 ```css
 transition: background-color .2s ease-in-out;
@@ -52,7 +59,7 @@ rotate(45deg)：这是一个2D旋转变换，将元素绕着其原点顺时针�
 4. 使元素缩小消失以及复原
 
 ```css
-//消失
+/* 消失 */
 @keyframes animate-line-2 {
   0% {
     transform: scale(1);
@@ -63,7 +70,7 @@ rotate(45deg)：这是一个2D旋转变换，将元素绕着其原点顺时针�
     opacity: 0;
   }
 }
-//逐渐变大出现
+/* 逐渐变大出现 */
 @keyframes animate-line-2-rev {
   0% {
     transform: scale(0);
@@ -86,5 +93,19 @@ rotate(45deg)：这是一个2D旋转变换，将元素绕着其原点顺时针�
 .no-animation {
 	-webkit-animation: none !important;
           animation: none !important; 
+}
+```
+6. less关于&的用法
+
+```css
+.menu-icon {
+  &:hover{
+    //meun-icon鼠标悬浮时的样式声明
+    ...
+  }
+  &.active{
+    //class为"meun-icon active"的样式声明
+    ...
+  }
 }
 ```
