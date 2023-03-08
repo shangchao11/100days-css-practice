@@ -1,0 +1,101 @@
+@bezier: cubic-bezier(.21,.98,.6,.99);
+
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+	box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+	background: #E56262;
+	color: #fff;
+}
+
+.center {
+	position: absolute;
+	width: 220px;
+	height: 220px;
+	top: 90px;
+	left: 90px;
+}
+
+.dot-1 {
+	position: absolute;
+	z-index: 3;
+	width: 30px;
+	height: 30px;
+	top: 95px;
+	left: 95px;
+	background: #fff;
+	border-radius: 50%;
+	animation-fill-mode: both;
+//     infinite: infinite 是一个动画迭代次数的关键字，用于指示动画应该无限循环播放而不停止。如果将它作为动画的迭代次数，那么动画将在到达最后一帧后立即从第一帧重新开始，不断播放。
+
+// alternate: alternate 是一个动画播放方式，用于指示动画应该来回循环播放而不是一直往前播放。具体来说，动画将在每个迭代结束时反向播放，然后在下一个迭代中再次正向播放。这个播放方式可以与 infinite 结合使用，实现一个往返无限循环的动画效果。在这种情况下，动画将永远来回循环，而不是在到达最后一次迭代后停止。
+	animation: jump-jump-1 2s @bezier infinite alternate;
+}
+
+.dot-2 {
+	position: absolute;
+	z-index: 2;
+	width: 60px;
+	height: 60px;
+	top: 80px;
+	left: 80px;
+	background: #fff;
+	border-radius: 50%;
+	animation-fill-mode: both;
+	animation: jump-jump-2 2s @bezier infinite alternate;
+}
+
+.dot-3 {
+	position: absolute;
+	z-index: 1;
+	width: 90px;
+	height: 90px;
+	top: 65px;
+	left: 65px;
+	background: #fff;
+	border-radius: 50%;
+	animation-fill-mode: both;
+	animation: jump-jump-3 2s @bezier infinite alternate;
+}
+
+@keyframes jump-jump-1 {
+	0%, 70% {
+		box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.2);
+		transform: scale(0);
+	}
+
+	100% {
+		box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3);
+		transform: scale(1);
+	}
+}
+
+@keyframes jump-jump-2 {
+	0%, 40% {
+		box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.2);
+		transform: scale(0);
+	}
+
+	100% {
+		box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3);
+		transform: scale(1);
+	}
+}
+
+@keyframes jump-jump-3 {
+	0%, 10% {
+		box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.2);
+		transform: scale(0);
+	}
+
+	100% {
+		box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3);
+		transform: scale(1);
+	}
+}

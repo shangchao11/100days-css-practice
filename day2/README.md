@@ -63,10 +63,12 @@ rotate(45deg)：这是一个2D旋转变换，将元素绕着其原点顺时针�
 @keyframes animate-line-2 {
   0% {
     transform: scale(1);
+    /** 调整透明度，opacity(1)为完全不透明*/
     opacity: 1;
   }
   100% {
     transform: scale(0);
+    /** 调整透明度，opacity(0)为完全透明*/
     opacity: 0;
   }
 }
