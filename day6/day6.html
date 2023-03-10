@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet/less" href="./day6css.less">
+    <script src="./less.min.js"></script>
+    <title>day6</title>
+</head>
+
+<body>
+    <div class="frame">
+        <div class="panel">
+            <div class="header">
+                <div class="menu-icon">
+                    <div class="dash-top"></div>
+                    <div class="dash-bottom"></div>
+                    <div class="circle"></div>
+                </div>
+                <span class="title">Notifications</span>
+                <input type="text" class="search-input" placeholder="Search ...">
+                <svg viewBox="0 0 512 512" width="25" title="search" class="search-icon">
+                    <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                  </svg>
+            </div>
+
+            <div class="notifications clearfix">
+                <div class="line"></div>
+                <div class="notification">
+                    <div class="circle"></div>
+                    <span class="time">9:24 AM</span>
+                    <p><b>John Walker</b> posted a photo on your wall.</p>
+                </div>
+                <div class="notification">
+                    <div class="circle"></div>
+                    <span class="time">8:19 AM</span>
+                    <p><b>Alice Parker</b> commented your last post.</p>
+                </div>
+                <div class="notification">
+                    <div class="circle"></div>
+                    <span class="time">Yesterday</span>
+                    <p><b>Luke Wayne</b> added you as friend.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><span class="fa fa-dashboard"></span>Dashboard</li>
+                <li><span class="fa fa-user"></span>Profile</li>
+                <li><span class="fa fa-bell"></span>Notifications</li>
+                <li><span class="fa fa-comments"></span>Messages</li>
+                <li><span class="fa fa-gear"></span>Settings</li>
+            </ul>
+        </div>
+
+    </div>
+    <script>
+        // 绑定 click 事件到 search-icon 元素上
+        document.querySelector('.search-icon').addEventListener('click', function () {
+            // 切换 search-input 元素的 active 类
+            document.querySelector('.search-input').classList.toggle('active');
+        });
+
+        // 绑定 click 事件到 menu-icon 元素上
+        document.querySelector('.menu-icon').addEventListener('click', function () {
+            // 切换 panel 元素的 show-menu 类
+            document.querySelector('.panel').classList.toggle('show-menu');
+            // 切换 menu 元素的 active 类
+            document.querySelector('.menu').classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
