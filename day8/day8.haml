@@ -1,0 +1,27 @@
+.frame
+	-42.times do |i|
+		%div{class: "star-#{i+1}"}
+	.sky-shadow
+	.center
+		.moon
+			.moon-center
+				- 42.times do |i|
+					%div{class: "crater-#{i+1}"} 
+			.moon-shadow
+		.mountain-1
+		.mountain-2
+		.mountain-3
+		.mountain-4
+		.mountain-5
+		.weather-data
+			.temperature 12°
+			.data
+				.wind Wind: E 7 km/h
+				.humidity Humidity: 87%
+			.preview
+				.tomorrow TUE
+				.tomorrow-temp 21°/9°
+				.day-after-tomorrow WED
+				.day-after-tomorrow-temp 23°/10°
+		- 42.times do |i|
+			%div{class: "drop-#{i+1}"}
