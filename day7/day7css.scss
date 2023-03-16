@@ -45,8 +45,8 @@
               height: 50px;
               background: #fff;
               border-radius: 50%;
-              transform-origin: (40 - $i * 3) + px (40 - $i * 3) + px;
-              animation: rotate (2.5 + $i / 5) + s ease-in-out ($i / 5) + s infinite;
+              transform-origin: #{40 - $i * 3}px #{40 - $i * 3}px;
+              animation: rotate #{2.5 + $i / 5}s ease-in-out #{$i / 5}s infinite;
               filter: blur(5px);
           }
       }
@@ -69,8 +69,8 @@
               height: (7 + $i) + px;
               background: #fff;
               border-radius: 50%;
-              transform-origin: (60 - $i * 2) + px (60 - $i * 2) + px;
-              animation: rotate (3.5 + $i / 5) + s ease-in-out ($i / 5) + s infinite;
+              transform-origin: #{60 - $i * 2}px #{60 - $i * 2}px;
+              animation: rotate #{3.5 + $i / 5}s ease-in-out #{$i / 5}s infinite;
               filter: blur(3px);
           }
       }

@@ -23,12 +23,13 @@ div{
 transition: background-color .2s ease-in-out;
 ```
 3. animation
-```css
+```scss
 /* 将元素的"animation"属性设置为"animate-line-1-rev"，即将应用"animate-line-1-rev"关键帧动画。
 将动画执行时间设置为0.7秒，即动画持续0.7秒。
 将动画的动态变化曲线设置为"cubic-bezier-in"，即使用"ease-in"缓动函数控制动画的速度变化。
+将动画延时时间设置为0.7秒，即动画0.7后播放。
 将动画结束后元素的状态设置为"forwards"，即动画结束时元素保持最后一帧的状态。 */
-animation: animate-line-1-rev .7s @cubic-bezier-in forwards;
+animation: animate-line-1-rev .7s @cubic-bezier-in .7s forwards;
 @cubic-bezier-in: cubic-bezier(0.30,1,0.70,1);
 ```
 这里面又细分关键帧动画和贝塞尔曲线两个知识点，以下是定义的关键帧动画
