@@ -1,0 +1,96 @@
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: #e4cdb0;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    //抗锯齿
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.shoe {
+    position: absolute;
+    width: 151px;
+    height: 128px;
+    left: 0;
+    bottom: 40%;
+    background: url('https://100dayscss.com/codepen/doc-martens.svg') center center no-repeat;
+    transform-origin: 0 95%;
+}
+
+.floor {
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #232323;
+}
+
+.left {
+    animation: leg-lift 2s infinite;
+
+    .shoe {
+        animation: ankle-rotation 2s infinite;
+    }
+}
+
+.right {
+    animation: leg-lift 2s infinite -1s;
+
+    .shoe {
+        animation: ankle-rotation 2s infinite -1s;
+    }
+}
+
+@keyframes leg-lift {
+
+    //     这段 SCSS 代码是一个 CSS 变换函数，其含义是将元素在 x 轴上平移 40 像素，在 y 轴上平移 240 像素。可以用它来使元素在屏幕上向左、右、上或下移动。这个函数可以用在 transform 属性里，像这样：
+
+    // transform: translate(40px, 240px);
+
+    // 可以用其他单位替换像素单位，例如 em 或 rem 等。
+    0%,
+    100% {
+        transform: translate(40px, 240px);
+    }
+
+    30% {
+        transform: translate(200px, 180px);
+    }
+
+    50% {
+        transform: translate(210px, 240px);
+    }
+}
+
+@keyframes ankle-rotation {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    40% {
+        transform: rotate(-25deg);
+    }
+
+    55% {
+        transform: rotate(0deg);
+    }
+}
