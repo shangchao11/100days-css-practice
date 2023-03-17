@@ -10,5 +10,5 @@
 ### 调试scss
 1. 安装sass: npm i sass -g
 2. 终端进入day9
-3. 执行sass --watch ./day9css.scss ./day9css.css
+3. 执行sass --watch ./day9.scss ./day9.css
 4. 保存scss时会自动更新css

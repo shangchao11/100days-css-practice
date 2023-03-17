@@ -10,7 +10,7 @@
 ### 调试scss
 1. 安装sass: npm i sass -g
 2. 终端进入day10
-3. 执行sass --watch ./day10css.scss ./day10css.css
+3. 执行sass --watch ./day10.scss ./day10.css
 4. 保存scss时会自动更新css
 
 ### 知识点

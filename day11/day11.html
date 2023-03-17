@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>day11</title>
+  <link rel="stylesheet" href="https://100dayscss.com/codepen/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./day11.css">
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <div class='frame'>
+    <div class='profile' id='profile-1'>
+      <img src='https://100dayscss.com/codepen/13-1.jpg'>
+      <div class='overlay'></div>
+      <div class='plus'></div>
+    </div>
+    <div class='profile' id='profile-2'>
+      <img src='https://100dayscss.com/codepen/13-2.jpg'>
+      <div class='overlay'></div>
+      <div class='plus'></div>
+    </div>
+    <div class='profile' id='profile-3'>
+      <img src='https://100dayscss.com/codepen/13-3.jpg'>
+      <div class='overlay'></div>
+      <div class='plus'></div>
+    </div>
+    <div class='profile' id='profile-4'>
+      <img src='https://100dayscss.com/codepen/13-4.jpg'>
+      <div class='overlay'></div>
+      <div class='plus'></div>
+    </div>
+    <div class='detail' id='detail-1'>
+      <div class='close'></div>
+      <img class='header' src='https://100dayscss.com/codepen/13-1-header.jpg'>
+      <div class='image'>
+        <img src='https://100dayscss.com/codepen/13-1.jpg'>
+      </div>
+      <div class='infos'>
+        <div class='name'>
+          Julia Toth
+        </div>
+        <div class='action'>
+          <div class='btn'>
+            <span class='fa fa-phone'></span>
+          </div>
+          <div class='btn'>
+            <span class='fa fa-comment'></span>
+          </div>
+          <div class='btn'>
+            <span class='fa fa-heart'></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var profileDoms = document.querySelectorAll('.profile'); 
+    var detailDom = document.querySelector('.detail'); 
+    var closeDom = document.querySelector('.close');
+    for( let profileDom of profileDoms){
+      profileDom.addEventListener('click', function() { detailDom.classList.add('active'); });
+    }
+    // 绑定 click 事件
+    closeDom.addEventListener('click', function () { detailDom.classList.remove('active'); });
+  </script>
+</body>
+
+</html>
